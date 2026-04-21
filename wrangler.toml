@@ -1,2 +1,5 @@
 name = "harness-tutorial"
-pages_build_output_dir = ".vitepress/dist"
+compatibility_date = "2026-04-21"
+
+[assets]
+directory = ".vitepress/dist"
