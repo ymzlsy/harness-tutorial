@@ -1,36 +1,54 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Harness Engineering 完全教程',
-  description: '为AI产品经理量身定制 · 从零到一 · 理论+实践+手搓框架',
+  title: 'Karaithy Wiki',
+  description: '个人知识库 · 教程 · 学习手册',
   lang: 'zh-CN',
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '开始学习', link: '/guide/module-0' },
-      { text: '附录', link: '/guide/appendix' }
-    ],
-    sidebar: [
       {
-        text: '教程模块',
+        text: '教程',
         items: [
-          { text: 'Module 0: 什么是Harness Engineering', link: '/guide/module-0' },
-          { text: 'Module 1: Context Engineering', link: '/guide/module-1' },
-          { text: 'Module 2: Architectural Constraints', link: '/guide/module-2' },
-          { text: 'Module 3: Entropy Management', link: '/guide/module-3' },
-          { text: 'Module 4: AI Factory 七层架构', link: '/guide/module-4' },
-          { text: 'Module 5: 实战案例与VibeCoding', link: '/guide/module-5' },
-          { text: 'Module 6: 手搓Agent Harness框架', link: '/guide/module-6' },
-          { text: 'Module 7: AI产品经理落地指南', link: '/guide/module-7' },
-        ]
-      },
-      {
-        text: '附录',
-        items: [
-          { text: '参考项目·文章·工具·金句', link: '/guide/appendix' }
+          { text: 'Harness Engineering', link: '/harness/module-0' },
+          // 以后新增教程在这里加一行即可
+          // { text: 'Hermes', link: '/hermes/intro' },
         ]
       }
     ],
+    sidebar: {
+      // ===== Harness Engineering 教程 =====
+      '/harness/': [
+        {
+          text: 'Harness Engineering 完全教程',
+          items: [
+            { text: 'Module 0: 什么是Harness Engineering', link: '/harness/module-0' },
+            { text: 'Module 1: Context Engineering', link: '/harness/module-1' },
+            { text: 'Module 2: Architectural Constraints', link: '/harness/module-2' },
+            { text: 'Module 3: Entropy Management', link: '/harness/module-3' },
+            { text: 'Module 4: AI Factory 七层架构', link: '/harness/module-4' },
+            { text: 'Module 5: 实战案例与VibeCoding', link: '/harness/module-5' },
+            { text: 'Module 6: 手搓Agent Harness框架', link: '/harness/module-6' },
+            { text: 'Module 7: AI产品经理落地指南', link: '/harness/module-7' },
+          ]
+        },
+        {
+          text: '附录',
+          items: [
+            { text: '参考项目·文章·工具·金句', link: '/harness/appendix' }
+          ]
+        }
+      ],
+      // ===== 以后新增教程，复制这个块 =====
+      // '/hermes/': [
+      //   {
+      //     text: 'Hermes 教程',
+      //     items: [
+      //       { text: '简介', link: '/hermes/intro' },
+      //     ]
+      //   }
+      // ],
+    },
     outline: {
       level: [2, 3],
       label: '本页目录'
@@ -39,12 +57,12 @@ export default defineConfig({
       provider: 'local'
     },
     footer: {
-      message: 'Harness Engineering 完全教程 v3',
-      copyright: '用确定性包裹概率性 · Structure In, Structure Out'
+      message: 'Karaithy Wiki · 个人知识库',
+      copyright: '© karaithy.com'
     },
     docFooter: {
-      prev: '上一模块',
-      next: '下一模块'
+      prev: '上一篇',
+      next: '下一篇'
     }
   }
 })
